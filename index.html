@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>MyPage</title>
+		<style>
+		
+			input::-webkit-outer-spin-button,input::-webkit-inner-spin-button
+			{
+				-webkit-appearance: none;
+				margin: 0;
+			}
+			
+			.Main
+			{
+				border:1px solid #d3d3d3;
+				background-color: #f1f1f1;
+				position: absolute;
+				top:5px;
+				right:5px;
+				bottom:5px;
+				left:5px;
+				z-index: 1
+			}
+			.Menu 
+			{
+				border: 5px outset red;
+				background-color: lightblue;
+				position: absolute;
+				text-align: center;
+				top:5px;
+				left:5px;
+				width:10%;
+				bottom:5px;
+				z-index: 1
+			}
+			.Display
+			{
+				border: 5px outset red;
+				background-color: lightblue;
+				position: absolute;
+				text-align: center;
+				top:5px;
+				right:5px;
+				bottom:5px;
+				left:11.5%;
+				z-index: 1
+			}
+			.Layer
+			{
+				position: absolute;
+				top:0px;
+				right:0px;
+				bottom:0px;
+				left:0px;
+
+			}
+			
+			table 
+			{
+				font-family: arial, sans-serif;
+				border-collapse: collapse;
+				justify-content: center;
+				width: 90%;
+				height: 3%;
+			}
+
+			td, th 
+			{
+				border: 1px solid #aaaaaa;
+				text-align: left;
+				padding: 1px;
+			}
+			
+			.center 
+			{
+				margin-left: auto;
+				margin-right: auto;
+				top:20%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="Main">
+			<div class="Menu">
+			
+				<h2>Menu</h2>
+				
+				<button type="button" onclick="AddFunction()" >Add</button>
+				
+				<button type="button" onclick="StartFunction()" >Start</button>
+				
+				<p></p>
+
+				<table id="myTable" class="center">
+				  <tr>
+					<th>Fre</th>
+					<th>Mag</th>
+
+				  </tr>
+				</table>
+			</div>
+			
+			<div class="Display" id="display">
+				<h2>Display</h2>
+
+				<canvas class="Layer" id="layer1" style="z-index: 2;">
+				This text is displayed if your browser does not support HTML5 Canvas.
+				</canvas>
+				
+				<canvas class="Layer" id="layer2" style="z-index: 3;">
+				This text is displayed if your browser does not support HTML5 Canvas.
+				</canvas>
+			</div>
+		</div>
+	</body>
+	<script src="Fourier.js"></script>
+</html>
